@@ -1,0 +1,79 @@
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background: url('images/bg.png') center/cover no-repeat fixed;
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+h1 {
+  font-size: 2.5em;
+  margin: 60px 0 10px;
+  text-shadow: 2px 2px 8px #000;
+  position: relative;
+  z-index: 1;
+}
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #000;
+  position: relative;
+  z-index: 1;
+}
+.cta {
+  padding: 14px 28px;
+  font-size: 1em;
+  background: #00d67f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  color: #000;
+  box-shadow: 3px 3px #222;
+  z-index: 1;
+  position: relative;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  z-index: 1;
+  position: relative;
+}
+.feature {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 3px 3px #000;
+}
+.feature img {
+  width: 100%;
+  border-radius: 8px;
+}
+.leaf {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url('images/leaf.png');
+  background-size: cover;
+  animation: fall linear infinite;
+  z-index: 0;
+}
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
